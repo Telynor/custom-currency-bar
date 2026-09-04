@@ -1,0 +1,33 @@
+<form class="ccb-config-form" autocomplete="off">
+  <p class="notes">{{localize "CCB.ConfigInstructions"}}</p>
+
+  <div class="ccb-config-list">
+    {{#each currencies as |currency index|}}
+    <div class="ccb-config-row ccb-drop-zone" data-index="{{index}}">
+      <div class="ccb-icon-field">
+        <img src="{{currency.img}}" alt="">
+        <file-picker name="currencies.{{index}}.img" data-field="img" type="image" value="{{currency.img}}"></file-picker>
+      </div>
+      <div class="ccb-config-main">
+        <input type="text" name="currencies.{{index}}.name" data-field="name" value="{{currency.name}}" placeholder="Currency name">
+        {{#if currency.uuid}}
+          <div class="ccb-source"><i class="fa-solid fa-link"></i> {{localize "CCB.ItemBacked"}}: {{currency.uuid}}</div>
+        {{else}}
+          <div class="ccb-source"><i class="fa-solid fa-database"></i> {{localize "CCB.ActorStored"}}</div>
+        {{/if}}
+        <div class="ccb-drop-hint"><i class="fa-solid fa-hand"></i> {{localize "CCB.DropHint"}}</div>
+      </div>
+      <div class="ccb-row-actions">
+        <button type="button" data-action="up" title="Move up"><i class="fa-solid fa-arrow-up"></i></button>
+        <button type="button" data-action="down" title="Move down"><i class="fa-solid fa-arrow-down"></i></button>
+        <button type="button" data-action="delete" title="Delete"><i class="fa-solid fa-trash"></i></button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="ccb-config-footer">
+    <button type="button" data-action="add"><i class="fa-solid fa-plus"></i> {{localize "CCB.AddCurrency"}}</button>
+    <button type="submit"><i class="fa-solid fa-floppy-disk"></i> {{localize "CCB.Save"}}</button>
+  </div>
+</form>

@@ -1,0 +1,17 @@
+{
+  "CCB.ConfigTitle": "Custom Currency Bar Configuration",
+  "CCB.ConfigName": "Custom Currencies",
+  "CCB.ConfigButton": "Configure Currencies",
+  "CCB.ConfigHint": "Add custom image-based or item-backed currencies to D&D 5e actor sheets.",
+  "CCB.ConfigInstructions": "Add a currency, choose its name and image, or drag an Item from a world directory or compendium onto its row to use that Item as the currency.",
+  "CCB.CustomCurrency": "Custom Currency",
+  "CCB.AddCurrency": "Add Currency",
+  "CCB.Save": "Save Currencies",
+  "CCB.Saved": "Custom currencies saved.",
+  "CCB.ItemBacked": "Item-backed",
+  "CCB.ActorStored": "Standalone actor value",
+  "CCB.DropHint": "Drop an Item here to make it the currency",
+  "CCB.DropItemOnly": "Only Foundry Items can be used as item-backed currency.",
+  "CCB.SourceMissing": "The source Item for {name} could not be found. Drag it into the configuration again.",
+  "CCB.Dnd5eOnly": "Custom Currency Bar requires the D&D 5e system."
+}

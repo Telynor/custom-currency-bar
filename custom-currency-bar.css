@@ -1,0 +1,36 @@
+.ccb-currency-bar {
+  margin: 6px 0;
+  padding: 6px 8px;
+  border: 1px solid var(--dnd5e-color-gold, #9f9275);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--dnd5e-background-card, #f1e9d2) 75%, transparent);
+}
+
+.ccb-heading {
+  margin-bottom: 4px;
+  color: var(--dnd5e-color-gold, #7a6a48);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ccb-currencies { display: flex; flex-wrap: wrap; gap: 6px 10px; }
+.ccb-currency { display: grid; grid-template-columns: 24px auto 48px; align-items: center; gap: 4px; min-width: 125px; }
+.ccb-currency img { width: 24px; height: 24px; border: 0; object-fit: contain; }
+.ccb-currency span { overflow: hidden; font-size: 0.8rem; text-overflow: ellipsis; white-space: nowrap; }
+.ccb-currency input { width: 48px; height: 24px; padding: 1px 3px; text-align: right; }
+
+.ccb-config-form { padding: 4px; }
+.ccb-config-list { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.ccb-config-row { display: grid; grid-template-columns: 190px 1fr auto; gap: 10px; padding: 8px; border: 1px solid var(--color-border-light-2); border-radius: 5px; }
+.ccb-config-row:hover { border-color: var(--color-border-highlight); }
+.ccb-icon-field { display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 6px; }
+.ccb-icon-field img { width: 40px; height: 40px; object-fit: contain; }
+.ccb-config-main { min-width: 0; }
+.ccb-config-main > input { width: 100%; }
+.ccb-source, .ccb-drop-hint { overflow: hidden; margin-top: 4px; color: var(--color-text-dark-secondary); font-size: 0.75rem; text-overflow: ellipsis; white-space: nowrap; }
+.ccb-row-actions { display: flex; align-items: center; gap: 3px; }
+.ccb-row-actions button { width: 30px; min-width: 30px; height: 30px; padding: 0; }
+.ccb-config-footer { display: flex; justify-content: space-between; gap: 10px; }
+.ccb-config-footer button { flex: 1; }

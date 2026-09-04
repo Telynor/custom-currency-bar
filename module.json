@@ -1,0 +1,20 @@
+{
+  "id": "custom-currency-bar",
+  "title": "Custom Currency Bar",
+  "description": "Create item-backed or standalone currencies with custom icons on D&D 5e character sheets.",
+  "version": "1.0.0",
+  "authors": [{ "name": "Telynor" }],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "relationships": {
+    "systems": [{ "id": "dnd5e", "type": "system", "compatibility": {} }]
+  },
+  "esmodules": ["scripts/custom-currency-bar.js"],
+  "styles": ["styles/custom-currency-bar.css"],
+  "languages": [{ "lang": "en", "name": "English", "path": "lang/en.json" }],
+  "manifest": "",
+  "download": ""
+}
