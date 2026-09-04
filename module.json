@@ -15,6 +15,6 @@
   "esmodules": ["scripts/custom-currency-bar.js"],
   "styles": ["styles/custom-currency-bar.css"],
   "languages": [{ "lang": "en", "name": "English", "path": "lang/en.json" }],
-  "manifest": "",
-  "download": ""
+  "manifest": "https://raw.githubusercontent.com/Telynor/custom-currency-bar/main/module.json",
+  "download": "https://github.com/Telynor/custom-currency-bar/releases/latest/download/custom-currency-bar.zip"
 }
