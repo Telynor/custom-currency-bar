@@ -172,7 +172,7 @@ function renderCurrencies(app, html) {
     const control = document.createElement("label");
     control.className = "ccb-currency";
     control.title = currency.mode === "item" ? `${currency.name} (inventory item)` : currency.name;
-    control.innerHTML = `<img src="${esc(currency.img)}" alt=""><span>${esc(currency.name)}</span><input type="number" min="0" step="1" value="${value}" ${actor.isOwner ? "" : "disabled"}>`;
+    control.innerHTML = `<img src="${esc(currency.img)}" alt=""><span>${esc(currency.name)}</span><input type="number" min="0" step="1" value="${value}" aria-label="${esc(currency.name)}" ${actor.isOwner ? "" : "disabled"}>`;
     control.querySelector("input").addEventListener("change", async event => {
       event.stopPropagation();
       await setCurrencyValue(actor, currency, event.currentTarget.value);
@@ -186,8 +186,11 @@ function renderCurrencies(app, html) {
     ?? root.querySelector("[data-tab='inventory']")
     ?? root.querySelector(".sheet-body");
   if (!anchor) return;
-  if (anchor.matches(".currency, [data-group='currency']")) anchor.insertAdjacentElement("afterend", bar);
-  else anchor.prepend(bar);
+  if (anchor.matches(".currency, [data-group='currency']")) {
+    bar.classList.add("ccb-inline");
+    bar.querySelector(".ccb-heading")?.remove();
+    anchor.append(bar);
+  } else anchor.prepend(bar);
 }
 
 Hooks.once("init", () => {
@@ -216,4 +219,3 @@ Hooks.on("updateItem", item => {
 Hooks.once("ready", () => {
   if (game.system.id !== "dnd5e") ui.notifications.error(game.i18n.localize("CCB.Dnd5eOnly"));
 });
-

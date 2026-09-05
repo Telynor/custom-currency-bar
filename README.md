@@ -7,6 +7,7 @@ A Foundry VTT v14 module for D&D 5e that adds configurable currencies with custo
 - Drag a world or compendium Item into the configuration to use its inventory quantity as currency.
 - Create standalone currencies stored independently on every Actor.
 - Choose an image through Foundry's file picker for either kind of currency.
+- Display custom currencies directly alongside the standard platinum, gold, electrum, silver, and copper fields.
 - Edit currency amounts directly from the Actor sheet.
 - When an item-backed currency is set above zero on an Actor who does not own it, the source Item is copied into that Actor's inventory.
 - Reorder and remove configured currencies.

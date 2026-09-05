@@ -21,6 +21,44 @@
 .ccb-currency span { overflow: hidden; font-size: 0.8rem; text-overflow: ellipsis; white-space: nowrap; }
 .ccb-currency input { width: 48px; height: 24px; padding: 1px 3px; text-align: right; }
 
+/* When the official D&D 5e wealth row is available, become one more coin field. */
+.ccb-currency-bar.ccb-inline {
+  display: contents;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.ccb-inline .ccb-currencies { display: contents; }
+.ccb-inline .ccb-currency {
+  display: grid;
+  grid-template-columns: 28px minmax(38px, 1fr);
+  align-items: center;
+  min-width: 0;
+  height: var(--form-field-height, 32px);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--dnd5e-background-card, rgba(255, 255, 255, 0.08));
+}
+.ccb-inline .ccb-currency img { width: 24px; height: 24px; }
+.ccb-inline .ccb-currency span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.ccb-inline .ccb-currency input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  text-align: right;
+}
+
 .ccb-config-form { padding: 4px; }
 .ccb-config-list { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
 .ccb-config-row { display: grid; grid-template-columns: 190px 1fr auto; gap: 10px; padding: 8px; border: 1px solid var(--color-border-light-2); border-radius: 5px; }

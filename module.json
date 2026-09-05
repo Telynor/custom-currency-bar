@@ -2,7 +2,7 @@
   "id": "custom-currency-bar",
   "title": "Custom Currency Bar",
   "description": "Create item-backed or standalone currencies with custom icons on D&D 5e character sheets.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [{ "name": "Telynor" }],
   "compatibility": {
     "minimum": "14",
